@@ -1,0 +1,19 @@
+server:
+  port: 8098
+eureka:
+  instance:
+    lease-renewal-interval-in-seconds: 1
+    lease-expiration-duration-in-seconds: 2
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+    healthcheck:
+      enabled: true
+    lease:
+        duration: 5
+spring:
+  application:
+    name: customer-service
+management:
+security:
+enable: false
